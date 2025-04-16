@@ -9,6 +9,7 @@
 
     <title>Lucky Shrub</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,6 +28,12 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+
+    <dialog id="popup">
+      <p>This website has been primarily tested on desktop screen sizes, so the layout may have issues on some mobile devices, especially older models.</p>
+      <button id="close-popup">Close</button>
+    </dialog>
+    
     <header>
       <div class="header-content">
         <h2 class="gidole-regular">+55 (92) 1234-5678</h2>
@@ -51,7 +58,7 @@
       <menu>
         <li><a href="#home">Home</a></li>
         <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact-form">Contact</a></li>
         <li><a href="#info">Info</a></li>
       </menu>
     </nav>
@@ -70,10 +77,10 @@
               <summary id="first-details-summary">
                 <span
                   class="lupine-font"
-                  style="background-color: #729c75; color: rgb(255, 255, 255)"
+                  style="background-color: #2b3c2c; color: rgb(255, 255, 255)"
                   >Lucky Shrub</span
                 >
-                is your go-to online destination for all things gardening,
+                is your go-to online destination for alpl things gardening,
                 offering a harmonious blend of premium products and personalized
                 services to green up your life. At Lucky Shrub, we believe that
                 everyone deserves a touch of nature’s magic, whether you have a
@@ -108,7 +115,7 @@
                 happiness, one shrub at a time.<br />
                 <span
                   id="read-less"
-                  style="display: none; color: #f0f0f0; font-size: 1.1rem"
+                  style="display: none; color: #2c9b53; font-size: 1.1rem"
                   >read less...</span
                 >
               </div>
@@ -136,16 +143,205 @@
         </div>
       </section>
 
-      <section></section>
+      <section class="product-section" id="products">
+        <div class="product-container">
+          <div class="product-card">
+            <img
+              src="./assets/images/planta-em-vaso-branco.png"
+              alt="Peace lily (Spathiphyllum)"
+            />
+            <h3 class="lupine-font">Peace lily (Spathiphyllum)</h3>
+            <p class="gidole-regular">
+              Peace lily in a stylish white pot, featuring shiny green leaves
+              and graceful white flowers. Perfect for indoor decoration, air
+              purification, and creating a peaceful atmosphere.
+            </p>
+            <button class="lupine-font">
+              <a href="https://pay.google.com/intl/pt_br/about/" target="_blank"
+                >Order</a
+              >
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="./assets/images/planta-vaso-outra.png"
+              alt="Fiddle Leaf Fig (Ficus lyrata)"
+            />
+            <h3 class="lupine-font">Fiddle Leaf Fig (Ficus lyrata)</h3>
+            <p class="gidole-regular">
+              Fiddle Leaf Fig in a sleek white cylindrical pot, showcasing
+              large, glossy green leaves with prominent veins. Perfect for
+              modern interiors, adding charm and purifying the air.
+            </p>
+            <button class="lupine-font">
+              <a href="https://pay.google.com/intl/pt_br/about/" target="_blank"
+                >Order</a
+              >
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="./assets/images/planta-no-vaso-folha-longa.png"
+              alt="Pothos (Epipremnum aureum)"
+            />
+            <h3 class="lupine-font">Pothos (Epipremnum aureum)</h3>
+            <p class="gidole-regular">
+              Pothos in a chic white pot, featuring vibrant green trailing
+              leaves with heart-shaped patterns. Perfect for brightening
+              interiors, purifying air, and easy maintenance. A timeless beauty!
+            </p>
+            <button class="lupine-font">
+              <a href="https://pay.google.com/intl/pt_br/about/" target="_blank"
+                >Order</a
+              >
+            </button>
+          </div>
+          <div class="product-card">
+            <img
+              src="./assets/images/gardeners-image.png"
+              alt="two gardeners"
+            />
+            <h3 class="lupine-font">Lucky Shrub Gardening Services</h3>
+            <p class="gidole-regular">
+              Bring life to your outdoor spaces with Lucky Shrub Gardening
+              Services! Offering expert landscaping, planting, pruning, lawn
+              care, and garden maintenance, we ensure vibrant and thriving
+              greenery year-round. Reliabl e and eco-friendly solutions tailored
+              to your needs.
+            </p>
+            <button>
+              <a href="https://pay.google.com/intl/pt_br/about/" target="_blank"
+                >Request a Quote</a
+              >
+            </button>
+          </div>
+        </div>
+        <div class="product-nav">
+          <button class="prev-btn">←</button>
+          <button class="next-btn">→</button>
+        </div>
+      </section>
 
-      <section></section>
-    </main>
+      <section class="contact-section" id="contact-form">
+        <div class="contact-container-flex">
+          <h2 class="lupine-font section-title">
+            Get in touch with us!
+          </h2>
 
-    <footer></footer>
+          <div class="contact-content">
+            <form class="contact-form" method="post" action="https://formspree.io/f/mnnpyzpq">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="youremail@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Describe the problem, product, or service that you need..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="lupine-font">Send</button>
+            </form>
+
+            <div class="contact-image">
+              <img
+                src="./assets/images/arvore-grande-sf.png"
+                alt="Pessoa cuidando de uma planta"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-section" id="info">
+        <div class="final-container">
+          <div class="final-text">
+            <h2>About the developer</h2>
+            <p>
+              I'm a passionate software engineering student with a strong love for programming and technology. I specialize in front-end development, where I enjoy bringing creative ideas to life through clean, responsive, and user-friendly interfaces. I also have a growing interest in game development and web design, constantly exploring new tools and techniques to improve my skills.<br>
+              Being a polyglot, I speak five languages, which has helped me connect with diverse communities and understand global perspectives in tech. My goal is to keep learning, building, and growing as a developer while contributing to meaningful and innovative projects.
+              <div class="social-icons">
+                <a href="https://github.com/HericAlexandre" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/herick-alexandre-correia-santos-580666236/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/herick_com_aga/" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </p>
+          </div>
+          <div class="final-image">
+            <img src="assets/images/EuFotoDois-min.jpg" alt="Developer Photo" />
+          </div>
+        </div>
+        
+            <!-- SOCIAL ICONS DENTRO DO CONTAINER -->
+      </section>
+            
+          </main>
+
+    <footer>
+      <div class="footer-container">
+        <h2>LUCKY SHRUB &copy</h2>
+        <img
+          src="./assets/Lucky-Shrub-logos/Asset 3@3x.png"
+          width="20px"
+          alt="lucky shrub logo"
+        />
+      </div>
+    </footer>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const prevBtn = document.querySelector(".prev-btn");
+      const nextBtn = document.querySelector(".next-btn");
+      const productContainer = document.querySelector(".product-container");
+
+      const cardWidth = document.querySelector(".product-card").offsetWidth; // Obtém a largura de um card
+
+      // Função para mover a galeria para a esquerda
+      prevBtn.addEventListener("click", function () {
+        productContainer.scrollBy({
+          left: -cardWidth, // Desloca a rolagem para a esquerda pelo tamanho de um card
+          behavior: "smooth", // Rolagem suave
+        });
+      });
+
+      // Função para mover a galeria para a direita
+      nextBtn.addEventListener("click", function () {
+        productContainer.scrollBy({
+          left: cardWidth, // Desloca a rolagem para a direita pelo tamanho de um card
+          behavior: "smooth", // Rolagem suave
+        });
+      });
+    });
+  </script>
+
+  <script src="popup.js"></script>
   <script src="carousel.js"></script>
-  <script src="touchcarousel.jsx"></script>
-  <script src="details.jsx"></script>
-  <script src="./parallax.jsx"></script>
-  <script src="carousel.jsx"></script>
+  <script src="touchcarousel.js"></script>
+  <script src="details.js"></script>
+  <script src="./parallax.js"></script>
+  <script src="carousel.js"></script>
 </html>
